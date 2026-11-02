@@ -24,3 +24,9 @@ Les vérifications dans Unity confirment les deux couleurs, le démarrage au pre
 ![Vue de départ dans Unity](captures/etape-1-depart.png)
 
 La scène au début d’un essai montre les deux générateurs, la plateforme centrale, le bouton Reset et le chronomètre à 02:00.
+
+## Prise en main au Quest 2
+
+J’ai pu me déplacer et orienter la caméra. En plaçant le contrôleur droit au contact d’un générateur et en appuyant sur la gâchette de l’index, je fais apparaître un bloc que je peux ensuite saisir. La manipulation initiale se fait au contact.
+
+Les scores des trois essais de référence et le choix de navigation restent à relever.
