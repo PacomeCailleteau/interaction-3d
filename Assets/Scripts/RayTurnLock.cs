@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Attachment;
@@ -13,7 +14,17 @@ public class RayTurnLock : MonoBehaviour
     private XRBaseInputInteractor interactor;
     private NearFarInteractor nearFar;
     private InteractionAttachController nearAttach;
-    private bool[] previousStates;
+    private sealed class ProviderLock
+    {
+        public bool wasEnabled;
+        public int users;
+    }
+
+    private static readonly Dictionary<Behaviour, ProviderLock> providerLocks = new Dictionary<Behaviour, ProviderLock>();
+    private readonly List<Behaviour> heldProviders = new List<Behaviour>();
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void ResetLocks() => providerLocks.Clear();
 
     private void OnEnable()
     {
@@ -29,16 +40,21 @@ public class RayTurnLock : MonoBehaviour
     {
         bool usesJoystick = ray ? ray.manipulateAttachTransform
             : nearFar && nearAttach && nearAttach.useManipulationInput && nearAttach.hasOffset;
-        if (!usesJoystick || !(args.interactableObject is XRGrabInteractable) || previousStates != null)
+        if (!usesJoystick || !(args.interactableObject is XRGrabInteractable) || heldProviders.Count > 0)
             return;
 
-        // The right stick manipulates the held block without also turning the player.
-        previousStates = new bool[turnProviders.Length];
-        for (int i = 0; i < turnProviders.Length; i++)
+        // Shared controls stay reserved until both hands have finished manipulating.
+        foreach (var provider in turnProviders)
         {
-            if (!turnProviders[i]) continue;
-            previousStates[i] = turnProviders[i].enabled;
-            turnProviders[i].enabled = false;
+            if (!provider || heldProviders.Contains(provider)) continue;
+            if (!providerLocks.TryGetValue(provider, out var state))
+            {
+                state = new ProviderLock { wasEnabled = provider.enabled };
+                providerLocks.Add(provider, state);
+            }
+            state.users++;
+            heldProviders.Add(provider);
+            provider.enabled = false;
         }
     }
 
@@ -53,9 +69,14 @@ public class RayTurnLock : MonoBehaviour
 
     private void RestoreTurning()
     {
-        if (previousStates == null) return;
-        for (int i = 0; i < turnProviders.Length; i++)
-            if (turnProviders[i]) turnProviders[i].enabled = previousStates[i];
-        previousStates = null;
+        foreach (var provider in heldProviders)
+        {
+            if (!providerLocks.TryGetValue(provider, out var state)) continue;
+            state.users--;
+            if (state.users > 0) continue;
+            if (provider) provider.enabled = state.wasEnabled;
+            providerLocks.Remove(provider);
+        }
+        heldProviders.Clear();
     }
 }
