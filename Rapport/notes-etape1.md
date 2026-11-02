@@ -14,9 +14,11 @@ J’ai réalisé deux essais de deux minutes avec la saisie directe initiale. J�
 | 1 | 2 minutes | 3 |
 | 2 | 2 minutes | 4 |
 
-## Choix de navigation proposé
+## Choix de navigation
 
 Je préfère le déplacement continu au joystick pour cette tâche. Il permet d’ajuster progressivement ma position près des générateurs et de la tour, sans interrompre la manipulation pour choisir une destination de téléportation. Ces petits déplacements sont pratiques pour me placer avant de poser un bloc.
+
+La téléportation m’a paru plus rapide pour changer de position, mais je l’ai trouvée déstabilisante. À l’arrivée, je perdais mes repères et je devais me réorienter par rapport à la tour. J’ai donc préféré garder le déplacement continu au joystick pour cette tâche.
 
 Une capture du résultat de la tour et du chronomètre reste à ajouter.
 
