@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class GenerateCube : MonoBehaviour
 {
@@ -18,6 +18,7 @@ public class GenerateCube : MonoBehaviour
     {
         if (isClicked)
         {
+            isClicked = false;
             if (timer.IsStoped())
             {
                 if (timer.StartTimer())
@@ -38,6 +39,5 @@ public class GenerateCube : MonoBehaviour
         obj.transform.SetPositionAndRotation(
             transform.position - new Vector3(0, 0.3f, 0),
             Random.rotation);
-        isClicked = false;
     }
 }
