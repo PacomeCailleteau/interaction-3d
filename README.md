@@ -32,7 +32,7 @@ Le chronomètre démarre à la première génération après Reset. Une fois le 
 
 ## Mesures pour le rapport
 
-Faire un court entraînement, puis trois essais de deux minutes avec la saisie directe initiale. Réinitialiser entre les essais. Compter les étages complets encore debout, avec deux blocs de même couleur par étage, une orientation perpendiculaire à l’étage précédent et une alternance bleu/jaune.
+Faire un court entraînement, puis deux essais de deux minutes avec la saisie directe initiale. Réinitialiser entre les essais. Compter les étages complets encore debout, avec deux blocs de même couleur par étage, une orientation perpendiculaire à l’étage précédent et une alternance bleu/jaune.
 
 Renseigner `Rapport/essais.csv` avec les scores et les observations. Conserver le premier score, le meilleur score et le nombre d’essais. Préciser le mode de navigation préféré et pourquoi il convient à cette tâche.
 

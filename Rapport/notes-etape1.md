@@ -3,15 +3,22 @@
 Matériel : Meta Quest 2 avec contrôleurs Touch.
 Personne réalisant les essais : Pacôme CAILLETEAU.
 Durée : deux minutes par essai.
-Nombre d’essais prévu après entraînement : trois.
+Nombre d’essais réalisés : deux.
 
-À renseigner après les essais au casque :
+## Résultats
 
-- Premier score et meilleur score.
-- Nombre d’essais réalisés.
-- Mode de navigation retenu et raisons du choix.
-- Difficultés pour attraper, tourner et poser les blocs.
-- Capture du résultat de la tour et du chronomètre.
+J’ai réalisé deux essais de deux minutes avec la saisie directe initiale. J’ai construit trois étages au premier essai et quatre au deuxième. Mon meilleur score est donc de quatre étages.
+
+| Essai | Durée | Étages complets |
+| --- | --- | --- |
+| 1 | 2 minutes | 3 |
+| 2 | 2 minutes | 4 |
+
+## Choix de navigation proposé
+
+Je préfère le déplacement continu au joystick pour cette tâche. Il permet d’ajuster progressivement ma position près des générateurs et de la tour, sans interrompre la manipulation pour choisir une destination de téléportation. Ces petits déplacements sont pratiques pour me placer avant de poser un bloc.
+
+Une capture du résultat de la tour et du chronomètre reste à ajouter.
 
 ## Préparation du projet
 
@@ -29,4 +36,4 @@ La scène au début d’un essai montre les deux générateurs, la plateforme ce
 
 J’ai pu me déplacer et orienter la caméra. En plaçant le contrôleur droit au contact d’un générateur et en appuyant sur la gâchette de l’index, je fais apparaître un bloc que je peux ensuite saisir. La manipulation initiale se fait au contact.
 
-Les scores des trois essais de référence et le choix de navigation restent à relever.
+Les deux scores communiqués sont conservés dans le relevé des essais. La navigation utilisée pendant chacun des essais reste à préciser dans ce relevé.
