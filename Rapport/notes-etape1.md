@@ -20,8 +20,6 @@ Je préfère le déplacement continu au joystick pour cette tâche. Il permet d�
 
 La téléportation m’a paru plus rapide pour changer de position, mais je l’ai trouvée déstabilisante. À l’arrivée, je perdais mes repères et je devais me réorienter par rapport à la tour. J’ai donc préféré garder le déplacement continu au joystick pour cette tâche.
 
-Une capture du résultat de la tour et du chronomètre reste à ajouter.
-
 ## Préparation du projet
 
 Les versions XRI 3.3.0, OpenXR 1.16.0 et Input System 1.17.0 sont conservées. Le fournisseur Android est OpenXR. Les générateurs, les points de saisie et les commandes du sujet sont inchangés.
@@ -38,4 +36,4 @@ La scène au début d’un essai montre les deux générateurs, la plateforme ce
 
 J’ai pu me déplacer et orienter la caméra. En plaçant le contrôleur droit au contact d’un générateur et en appuyant sur la gâchette de l’index, je fais apparaître un bloc que je peux ensuite saisir. La manipulation initiale se fait au contact.
 
-Les deux scores communiqués sont conservés dans le relevé des essais. La navigation utilisée pendant chacun des essais reste à préciser dans ce relevé.
+Les deux scores communiqués sont conservés dans le relevé des essais. La navigation utilisée pendant chaque essai n’a pas été relevée.

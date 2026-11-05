@@ -2,48 +2,71 @@
 
 Pacôme CAILLETEAU, FIL A3 Front.
 
-TP RX sur les techniques de manipulation en réalité virtuelle. Le projet de départ est celui fourni par Cédric Fleury sur la page du TP d’Étienne Peillard.
+TP RX sur les techniques de manipulation en réalité virtuelle. Le projet de départ est celui fourni par Cédric Fleury sur la [page du TP](https://www.etiennepeillard.com/fr/teaching/lab/3d-interaction/).
 
 ## Ouvrir le projet
 
-Cloner ce dépôt, puis ajouter le dossier dans Unity Hub. Ouvrir avec Unity 6000.3.27f1 et charger `Assets/Scenes/Interaction.unity`.
+Cloner ce dépôt, puis ajouter son dossier dans Unity Hub. Ouvrir avec **Unity 6000.3.27f1** et charger `Assets/Scenes/Interaction.unity`.
 
-L’archive fournie a été créée avec Unity 6000.3.1f1. Sa version d’origine est conservée dans le premier commit. Les packages du sujet sont conservés, dont XRI 3.3.0, OpenXR 1.16.0 et Input System 1.17.0. Les Starter Assets restent ceux du dossier 3.1.2. Les groupes de recommandations VR et Development ont été retirés pour empêcher Unity 6.3.27 de remplacer automatiquement les versions du sujet. Leurs packages nécessaires restent installés individuellement.
+Le projet utilise XRI 3.3.0, OpenXR 1.16.0 et Input System 1.17.0. Les Starter Assets fournis restent dans le dossier `3.1.2`, qui correspond à la version du sample lors de son import. Ne pas les réimporter avec une autre version. L’archive d’origine a été enregistrée avec Unity 6000.3.1f1 et reste conservée dans le premier commit.
 
-## Étape 1
+## Lancer sur un Meta Quest 2
 
-La scène contient les générateurs bleu et jaune, la plateforme centrale, le bouton Reset et le chronomètre de deux minutes. La saisie directe et les points d’attache fournis sont conservés.
+1. Installer Android Build Support, Android SDK/NDK et OpenJDK pour cet éditeur.
+2. Brancher le Quest 2 en mode développeur et autoriser le débogage USB.
+3. Dans `File > Build Profiles`, activer Android et vérifier que `Interaction` est la scène incluse.
+4. Conserver OpenXR comme fournisseur Android, le profil Oculus Touch, IL2CPP, ARM64, Vulkan et Multi Pass.
+5. Lancer `Build And Run`. Quitter Quest Link si son interface prend la place de l’application autonome.
 
-La cible est un Meta Quest 2 autonome. Installer Android Build Support, le SDK/NDK et OpenJDK pour cet éditeur. Dans Build Profiles, choisir Android et la scène `Interaction`. La configuration utilise OpenXR, Oculus Touch, Vulkan et Multi Pass. L’identifiant `com.pacome.interaction3d` permet de garder le TP Intro VR installé à côté.
+L’identifiant Android est `com.pacome.interaction3d`. La version finale testée au Quest 2 est la version 0.1.4, code 5. Multi Pass reprend le réglage qui avait corrigé le dédoublement des contrôleurs dans le TP précédent.
 
-Le mode Multi Pass reprend le réglage qui avait corrigé le dédoublement des contrôleurs dans le TP précédent.
+## Commandes
 
-## Commandes à vérifier au casque
+| Commande | Action |
+| --- | --- |
+| Joystick gauche | Déplacement continu |
+| X | Changer de mode de navigation, dont la téléportation |
+| B | Technique de la main droite |
+| Y | Technique de la main gauche |
+| Gâchette sous l’index | Créer un bloc sur un générateur, saisir un bloc ou sélectionner Reset |
+| Relâcher la gâchette | Lâcher le bloc |
+| Joystick de la main qui tient le bloc | Régler la distance et la rotation lorsque le mode le permet |
 
-- Joystick gauche pour la navigation continue.
-- X pour changer de mode de navigation.
-- Mettre le contrôleur droit en contact avec un générateur et appuyer sur la gâchette de l’index pour créer un bloc.
-- Utiliser la même gâchette au contact d’un bloc pour le saisir, puis la relâcher pour le poser.
-- Sélectionner Reset pour vider la scène et remettre le chronomètre à zéro.
+Au démarrage, chaque main est en saisie directe. B et Y parcourent indépendamment cet ordre :
 
-Un défaut du script fourni a été corrigé : un clic sur un générateur après la fin du temps est maintenant consommé, au lieu de rester en attente et de relancer automatiquement un essai après Reset.
+| Appuis depuis le démarrage | Mode | Comportement |
+| --- | --- | --- |
+| 0 | Direct Interactor | Saisie au contact |
+| 1 | Ray Fixed, bleu | Saisie à distance fixe |
+| 2 | Ray Adjustable, vert | Distance et rotation réglables au joystick |
+| 3 | Ray Force Grab, orange | Rappel à la main, attache réglable |
+| 4 | Near Far, violet | Saisie proche ou lointaine, Far Attach Mode = Far |
+| 5 | Near Far Force Grab, jaune | Saisie proche ou rappel à la main, Far Attach Mode = Near |
 
-Le chronomètre démarre à la première génération après Reset. Une fois le temps écoulé, utiliser Reset avant un nouvel essai.
+Le prochain appui revient à la saisie directe. Relâcher le bloc avant de changer de technique. En Near Far jaune, une fois le bloc ramené à la main, son placement se fait avec les mouvements physiques du contrôleur.
 
-## Mesures pour le rapport
+Lors d’une manipulation au joystick, les commandes de locomotion qui utilisent le même stick sont suspendues. Elles reprennent après le dernier relâchement concerné. Les deux mains peuvent tenir deux blocs distincts simultanément. Un bloc reste tenu par une seule main à la fois.
 
-Faire un court entraînement, puis deux essais de deux minutes avec la saisie directe initiale. Réinitialiser entre les essais. Compter les étages complets encore debout, avec deux blocs de même couleur par étage, une orientation perpendiculaire à l’étage précédent et une alternance bleu/jaune.
+## Générateurs et chronomètre
 
-Renseigner `Rapport/essais.csv` avec les scores et les observations. Conserver le premier score, le meilleur score et le nombre d’essais. Préciser le mode de navigation préféré et pourquoi il convient à cette tâche.
+Les deux générateurs d’origine produisent des blocs saisis au centre. Les copies bleu clair et jaune orangé produisent des blocs avec Dynamic Attach, Match Position, Match Rotation et Snap To Collider Volume activés.
 
-Les comparaisons suivantes garderont la même durée et le même nombre d’essais. Les nouveaux modes seront ajoutés après validation de chaque étape.
+Le chronomètre démarre à la première génération après Reset. Un essai dure deux minutes. Chaque étage complet comporte deux blocs de même couleur, perpendiculaires à l’étage précédent, avec une alternance bleu et jaune. Reset supprime les blocs créés et remet le chronomètre à deux minutes.
 
-## Rendu attendu
+Un défaut du script fourni a été corrigé : un clic sur un générateur après expiration est consommé, au lieu de rester en attente et de relancer le chronomètre après Reset.
 
-Le rendu est un rapport PDF avec l’identité, la formation, le cours, la date et le lien du dépôt. Il présente les étapes avec des captures légendées, les réglages testés, les difficultés rencontrées et un bilan comparatif. Les scores et le ressenti sont présentés séparément.
+## Rendu
 
-Le PDF anglais téléchargeable est le sujet original. Les réponses sont à intégrer au rapport, sans questionnaire séparé.
+[Rapport PDF](Rapport/Compte_rendu_Interaction3D_Pacome_CAILLETEAU.pdf) · [Version texte](Rapport/compte-rendu.md) · [Tableau comparatif](Rapport/comparaison.csv)
 
-Dépôt : https://github.com/PacomeCailleteau/interaction-3d
+## Validation et compte rendu
 
-Sujet : https://www.etiennepeillard.com/fr/teaching/lab/3d-interaction/
+Les six étapes ont été testées au Quest 2. Des vérifications dans Unity avec des entrées simulées couvrent aussi les changements de mode indépendants, les points d’attache, les deux ordres de relâchement, les filtres de téléportation, les générateurs et Reset.
+
+Les notes de progression et les captures sont dans `Rapport`. Les nouvelles captures de manipulation proviennent de la caméra du joueur dans Unity, avec des contrôleurs simulés et le chronomètre réellement en cours. Les ressentis rapportés proviennent des essais dans le casque.
+
+Les scores initiaux communiqués sont de trois puis quatre étages. Les autres valeurs chiffrées utilisées pour illustrer la comparaison sont des données simulées et doivent être lues comme telles.
+
+Les commits par étape permettent de suivre la progression. Le point d’entrée pour tester l’application finale est `main`.
+
+[Consignes du compte rendu](https://www.etiennepeillard.com/fr/teaching/tutorial/rapport-tp/) · [Cours Interaction 3D](https://www.etiennepeillard.com/fr/slides/vr-interaction/)
