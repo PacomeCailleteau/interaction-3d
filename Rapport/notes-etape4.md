@@ -6,6 +6,14 @@ Le rayon vert arrive en deuxième position. Le réglage de la distance est prati
 
 Le rayon bleu est celui que j’ai trouvé le moins pratique pour cette tâche. Le bloc reste à sa distance de saisie, sans possibilité de le rapprocher au joystick. S’il est pris trop loin, il devient difficile à placer sur la tour sans se déplacer.
 
-La capture ci-dessous montre les trois rayons dans la hiérarchie et les réglages du rayon vert.
+Les captures ci-dessous montrent le rayon bleu à distance fixe, le rayon vert après réglage au joystick, puis le rayon orange au survol et le rappel du bloc à la main.
 
-![Configuration du rayon réglable](captures/etape-4-rayon-reglable.png)
+![Rayon bleu](captures/etape-4-rayon-bleu.png)
+
+![Rayon vert après manipulation](captures/etape-4-rayon-vert.png)
+
+![Rayon orange au survol](captures/etape-4-rayon-orange.png)
+
+![Bloc ramené à la main](captures/etape-4-force-grab.png)
+
+Les captures de manipulation sont réalisées dans Unity avec des contrôleurs simulés. Le chronomètre et Reset sont ceux de la scène. Le ressenti ci-dessus correspond aux essais réalisés au Quest 2.

@@ -6,6 +6,12 @@ Lorsque je suis juste devant la tour, je préfère la version jaune avec Force G
 
 Le violet me paraît donc plus pratique pour construire à distance, tandis que le jaune convient mieux lorsque je suis proche de la tour.
 
-La capture ci-dessous montre les deux modes dans la hiérarchie et les réglages de Near Far sans Force Grab.
+Les captures ci-dessous montrent Near Far violet à distance puis après manipulation au joystick, et Near Far jaune avec le bloc ramené à la main.
 
-![Configuration de Near Far](captures/etape-5-near-far.png)
+![Near Far violet à distance](captures/etape-5-violet-distance.png)
+
+![Near Far violet après manipulation](captures/etape-5-violet-manipulation.png)
+
+![Near Far jaune avec Force Grab](captures/etape-5-jaune-main.png)
+
+Les captures de manipulation sont réalisées dans Unity avec des contrôleurs simulés. Le chronomètre et Reset sont ceux de la scène. Le ressenti ci-dessus correspond aux essais réalisés au Quest 2.
