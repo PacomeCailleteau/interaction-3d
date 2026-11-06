@@ -1,9 +1,9 @@
-configuration,gauche,droite,attache,options,premier,meilleur,essais,nature,observation
-Directe initiale,Navigation,Directe,Centre,Saisie au contact,3,4,2,Relevé,Repère initial
-Directe dynamique,Navigation,Directe,Contact,Dynamic Attach,4,6,2,Simulé,Prise conservée
-Rayon bleu,Navigation,Rayon fixe,Contact,"Force Grab non, attache fixe",2,3,2,Simulé,Distance contraignante
-Rayon vert,Navigation,Rayon réglable,Contact,"Force Grab non, attache réglable",4,6,2,Simulé,Rappel lent de loin
-Rayon orange,Navigation,Force Grab,Contact,"Force Grab oui, attache réglable",5,7,2,Simulé,Préféré parmi les rayons
-Near Far violet,Navigation,Near Far,Contact,Far Attach Mode = Far,6,8,2,Simulé,Préféré loin de la tour
-Near Far jaune,Navigation,Near Far,Contact,Far Attach Mode = Near,6,8,2,Simulé,Préféré près de la tour
-Deux mains,Near Far violet,Near Far jaune,Contact,"Far à gauche, Near à droite",5,6,2,Simulé,Une main préférée près de la tour
+configuration,gauche,droite,attache,options,premier,deuxieme,meilleur,essais,observation
+Directe initiale,Navigation,Directe,Centre,Saisie au contact,3,4,4,2,Repère initial
+Directe dynamique,Navigation,Directe,Contact,Dynamic Attach,4,6,6,2,Prise conservée
+Rayon bleu,Navigation,Rayon fixe,Contact,"Force Grab non, attache fixe",2,3,3,2,Distance contraignante
+Rayon vert,Navigation,Rayon réglable,Contact,"Force Grab non, attache réglable",4,6,6,2,Rappel lent de loin
+Rayon orange,Navigation,Force Grab,Contact,"Force Grab oui, attache réglable",5,7,7,2,Préféré parmi les rayons
+Near Far violet,Navigation,Near Far,Contact,Far Attach Mode = Far,6,8,8,2,Préféré loin de la tour
+Near Far jaune,Navigation,Near Far,Contact,Far Attach Mode = Near,6,8,8,2,Préféré près de la tour
+Deux mains,Near Far violet,Near Far jaune,Contact,"Far à gauche, Near à droite",5,6,6,2,Une main préférée près de la tour

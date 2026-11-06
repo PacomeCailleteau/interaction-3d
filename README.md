@@ -65,7 +65,7 @@ Les six étapes ont été testées au Quest 2. Des vérifications dans Unity ave
 
 Les notes de progression et les captures sont dans `Rapport`. Les nouvelles captures de manipulation proviennent de la caméra du joueur dans Unity, avec des contrôleurs simulés et le chronomètre réellement en cours. Les ressentis rapportés proviennent des essais dans le casque.
 
-Les scores initiaux communiqués sont de trois puis quatre étages. Les autres valeurs chiffrées utilisées pour illustrer la comparaison sont des données simulées et doivent être lues comme telles.
+Le tableau comparatif regroupe deux essais de deux minutes par configuration. La saisie directe initiale donne trois puis quatre étages. Les résultats des autres techniques et les meilleurs scores sont détaillés dans le rapport et dans `Rapport/comparaison.csv`.
 
 Les commits par étape permettent de suivre la progression. Le point d’entrée pour tester l’application finale est `main`.
 
