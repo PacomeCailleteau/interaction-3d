@@ -6,4 +6,4 @@ Rayon vert,Navigation,Rayon réglable,Contact,"Force Grab non, attache réglable
 Rayon orange,Navigation,Force Grab,Contact,"Force Grab oui, attache réglable",5,7,7,2,Préféré parmi les rayons
 Near Far violet,Navigation,Near Far,Contact,Far Attach Mode = Far,6,8,8,2,Préféré loin de la tour
 Near Far jaune,Navigation,Near Far,Contact,Far Attach Mode = Near,6,8,8,2,Préféré près de la tour
-Deux mains,Near Far violet,Near Far jaune,Contact,"Far à gauche, Near à droite",5,6,6,2,Une main préférée près de la tour
+Deux mains,Manipulation,Manipulation,Contact,Modes indépendants Y et B,5,6,6,2,Une main préférée près de la tour

@@ -1,19 +1,24 @@
-# 4. Ajouter un rayon virtuel
+# 4. Comparer les rayons virtuels
 
-Je préfère le rayon orange avec Force Grab. Le bloc vient directement à la main lors de la saisie. Je peux ensuite l’éloigner légèrement avec le joystick si nécessaire pour le placer sur la tour.
 
-Le rayon vert arrive en deuxième position. Le réglage de la distance est pratique, mais lorsqu’un bloc est saisi de loin, le ramener suffisamment près prend du temps avant de pouvoir le positionner précisément.
+Les trois rayons utilisent la gâchette sous l’index et les mêmes filtres. Le rayon permet d’atteindre les générateurs sans s’approcher. La saisie directe reste plus simple pour placer un bloc proche, car son mouvement suit directement celui de la main.
 
-Le rayon bleu est celui que j’ai trouvé le moins pratique pour cette tâche. Le bloc reste à sa distance de saisie, sans possibilité de le rapprocher au joystick. S’il est pris trop loin, il devient difficile à placer sur la tour sans se déplacer.
 
-Les captures ci-dessous montrent le rayon bleu à distance fixe, le rayon vert après réglage au joystick, puis le rayon orange au survol et le rappel du bloc à la main.
+| Variante | Force Grab | Attache au joystick |
+| --- | --- | --- |
+| Bleu | Non | Non |
+| Vert | Non | Distance et rotation |
+| Orange | Oui | Distance et rotation |
 
-![Rayon bleu](captures/etape-4-rayon-bleu.png)
 
-![Rayon vert après manipulation](captures/etape-4-rayon-vert.png)
+![Bleu : distance de saisie fixe.](captures/etape-4-rayon-bleu.png)
 
-![Rayon orange au survol](captures/etape-4-rayon-orange.png)
+![Vert : réglage de distance et de rotation.](captures/etape-4-rayon-vert.png)
 
-![Bloc ramené à la main](captures/etape-4-force-grab.png)
+![Orange : survol d’un bloc éloigné.](captures/etape-4-rayon-orange.png)
 
-Les captures de manipulation sont réalisées dans Unity avec des contrôleurs simulés. Le chronomètre et Reset sont ceux de la scène. Le ressenti ci-dessus correspond aux essais réalisés au Quest 2.
+![Force Grab ramène le bloc à la main.](captures/etape-4-force-grab.png)
+
+Je préfère le rayon orange. Le bloc vient directement à la main, puis je peux l’éloigner légèrement au joystick pour le placer. Le vert arrive en deuxième position. Le réglage est pratique, mais ramener un bloc saisi de loin prend du temps. Le bleu est le moins pratique. Sans réglage de distance, un bloc pris trop loin est difficile à placer sans se déplacer.
+
+Force Grab réduit le transport à distance, mais change brusquement la position du bloc lors de la prise. Manipulate Attach Transform permet d’ajuster ensuite la distance et la rotation. Avec le rayon orange, j’ai obtenu 5 puis 7 étages, ce qui en fait mon meilleur résultat parmi les trois rayons.

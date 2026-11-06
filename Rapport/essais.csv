@@ -1,3 +1,17 @@
-configuration,essai,duree_secondes,main_gauche,main_droite,attache,navigation,etages_complets,observations
-Directe initiale,1,120,Navigation,Directe,Initiale,,3,
-Directe initiale,2,120,Navigation,Directe,Initiale,,4,
+configuration,essai,duree_secondes,main_gauche,main_droite,attache,options,etages_complets,observations
+Directe initiale,1,120,Navigation,Directe,Centre,Saisie au contact,3,Repère initial
+Directe initiale,2,120,Navigation,Directe,Centre,Saisie au contact,4,Repère initial
+Directe dynamique,1,120,Navigation,Directe,Contact,Dynamic Attach,4,Prise conservée
+Directe dynamique,2,120,Navigation,Directe,Contact,Dynamic Attach,6,Prise conservée
+Rayon bleu,1,120,Navigation,Rayon fixe,Contact,"Force Grab non, attache fixe",2,Distance contraignante
+Rayon bleu,2,120,Navigation,Rayon fixe,Contact,"Force Grab non, attache fixe",3,Distance contraignante
+Rayon vert,1,120,Navigation,Rayon réglable,Contact,"Force Grab non, attache réglable",4,Rappel lent de loin
+Rayon vert,2,120,Navigation,Rayon réglable,Contact,"Force Grab non, attache réglable",6,Rappel lent de loin
+Rayon orange,1,120,Navigation,Force Grab,Contact,"Force Grab oui, attache réglable",5,Préféré parmi les rayons
+Rayon orange,2,120,Navigation,Force Grab,Contact,"Force Grab oui, attache réglable",7,Préféré parmi les rayons
+Near Far violet,1,120,Navigation,Near Far,Contact,Far Attach Mode = Far,6,Préféré loin de la tour
+Near Far violet,2,120,Navigation,Near Far,Contact,Far Attach Mode = Far,8,Préféré loin de la tour
+Near Far jaune,1,120,Navigation,Near Far,Contact,Far Attach Mode = Near,6,Préféré près de la tour
+Near Far jaune,2,120,Navigation,Near Far,Contact,Far Attach Mode = Near,8,Préféré près de la tour
+Deux mains,1,120,Manipulation,Manipulation,Contact,Modes indépendants Y et B,5,Une main préférée près de la tour
+Deux mains,2,120,Manipulation,Manipulation,Contact,Modes indépendants Y et B,6,Une main préférée près de la tour

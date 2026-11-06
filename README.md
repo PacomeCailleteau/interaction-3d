@@ -57,16 +57,14 @@ Un défaut du script fourni a été corrigé : un clic sur un générateur aprè
 
 ## Rendu
 
-[Rapport PDF](Rapport/Compte_rendu_Interaction3D_Pacome_CAILLETEAU.pdf) · [Version texte](Rapport/compte-rendu.md) · [Tableau comparatif](Rapport/comparaison.csv)
+[Rapport PDF](Rapport/Compte_rendu_Interaction3D_Pacome_CAILLETEAU.pdf) · [Version texte](Rapport/compte-rendu.md) · [Tableau comparatif](Rapport/comparaison.csv) · [Détail des essais](Rapport/essais.csv)
 
-## Validation et compte rendu
+## État final et résultats
 
-Les six étapes ont été testées au Quest 2. Des vérifications dans Unity avec des entrées simulées couvrent aussi les changements de mode indépendants, les points d’attache, les deux ordres de relâchement, les filtres de téléportation, les générateurs et Reset.
+Les techniques de manipulation ont été testées au Meta Quest 2 avec les contrôleurs Touch : saisie directe, point de contact dynamique, trois variantes du rayon et deux variantes Near Far. Les commandes permettent de changer de technique sur chaque main, de créer les deux couleurs, de saisir et relâcher les blocs, de manipuler avec les deux mains et de réinitialiser la tâche.
 
-Les notes de progression et les captures sont dans `Rapport`. Les nouvelles captures de manipulation proviennent de la caméra du joueur dans Unity, avec des contrôleurs simulés et le chronomètre réellement en cours. Les ressentis rapportés proviennent des essais dans le casque.
+Le fichier `Rapport/essais.csv` contient les 16 essais de deux minutes, soit deux par configuration. `Rapport/comparaison.csv` en donne la synthèse avec les deux scores et le meilleur résultat. Le rapport présente les réglages et les observations pour chaque technique.
 
-Le tableau comparatif regroupe deux essais de deux minutes par configuration. La saisie directe initiale donne trois puis quatre étages. Les résultats des autres techniques et les meilleurs scores sont détaillés dans le rapport et dans `Rapport/comparaison.csv`.
-
-Les commits par étape permettent de suivre la progression. Le point d’entrée pour tester l’application finale est `main`.
+Les notes par étape reprennent les sections du rapport. Les captures légendées sont dans `Rapport/captures`. La version à ouvrir pour tester l’application finale est `main`. Les commits par étape permettent de suivre la progression.
 
 [Consignes du compte rendu](https://www.etiennepeillard.com/fr/teaching/tutorial/rapport-tp/) · [Cours Interaction 3D](https://www.etiennepeillard.com/fr/slides/vr-interaction/)

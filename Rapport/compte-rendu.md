@@ -147,7 +147,7 @@ J’ai prévu un verrou partagé pour les commandes de locomotion. Quand les deu
 # Bilan comparatif et état final
 
 
-J’ai réalisé deux essais de deux minutes pour chaque technique. Avec la saisie directe initiale, j’ai construit 3 étages au premier essai et 4 au deuxième. Le tableau ci-dessous regroupe mes résultats et ce que je retiens des techniques testées.
+J’ai réalisé deux essais de deux minutes pour chaque technique. Le tableau ci-dessous regroupe mes résultats et ce que je retiens des techniques testées.
 
 
 | Configuration | Main utilisée | Saisie | Réglage | Essai 1 | Essai 2 | Meilleur | Ce que je retiens |
